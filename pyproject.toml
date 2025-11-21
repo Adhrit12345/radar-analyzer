@@ -1,0 +1,33 @@
+[project]
+name = "radar_project"
+version = "0.1.0"
+description = "Sample Python project scaffolded for Python 3.13"
+readme = "README.md"
+requires-python = ">=3.13,<4"
+authors = [ { name = "Your Name", email = "you@example.com" } ]
+dependencies = [
+	"uv",
+	"numpy",
+	"scikit-learn",
+	"joblib",
+    "matplotlib",
+    "pandas",
+]
+
+[project.scripts]
+radar-project = "radar_project.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
