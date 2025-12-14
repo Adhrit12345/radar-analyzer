@@ -573,7 +573,7 @@ def main():
     parser.add_argument("--out-dir", required=True, help="Output directory for models/reports (train) or predictions (predict).")
     parser.add_argument("--model-dir", help="Model dir (used in predict mode) - if not provided, uses out-dir.")
     parser.add_argument("--predict-folder", help="Folder with JSONs (flat) for prediction (predict mode).")
-    parser.add_argument("--pet-tuned", action="store_true", help="Use pet-tuned thresholds for heuristics.")
+    parser.add_argument("---tuned", action="store_true", help="Use pet-tuned thresholds for heuristics.")
     args = parser.parse_args()
     if args.mode == "train":
         if not args.data_root:
